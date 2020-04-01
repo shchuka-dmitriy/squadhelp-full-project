@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "root1986",
+    "database": "todo-dev",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": "Op"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "root1986",
+    "database": "todo-test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": "Op"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "root1986",
+    "database": "todo-prod",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": "Op"
+  }
+}
