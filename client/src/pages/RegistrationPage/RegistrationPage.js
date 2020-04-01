@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {clearErrorSignUpAndLogin} from '../../actions/actionCreator';
 import CONSTANTS from '../../constants';
 
+
 const RegistrationPage = (props) => {
     props.clearError();
 
@@ -17,7 +18,9 @@ const RegistrationPage = (props) => {
         <div className={styles.signUpPage}>
             <div className={styles.signUpContainer}>
                 <div className={styles.headerSignUpPage}>
-                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}logo.png`} alt="logo"/>
+                    <Link to='/' >
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}logo.png`} alt="logo"/>
+                    </Link>
                     <div className={styles.linkLoginContainer}>
                         <Link to='/login' style={{textDecoration: 'none'}}><span>Login</span></Link>
                     </div>
