@@ -12,9 +12,7 @@ import CONSTANTS from '../../constants';
 import customValidator from '../../validators/validator';
 import Schems from '../../validators/validationSchems';
 
-
 class RegistrationForm extends React.Component {
-
 
     componentWillUnmount() {
         this.props.authClear();
@@ -38,14 +36,7 @@ class RegistrationForm extends React.Component {
         return (
             <div className={styles.signUpFormContainer}>
                 {error && <Error data={error.data} status={error.status} clearError={authClear}/>}
-                <div className={styles.headerFormContainer}>
-                    <h2>
-                        CREATE AN ACCOUNT
-                    </h2>
-                    <h4>
-                        We always keep your name and email address private.
-                    </h4>
-                </div>
+
                 <form onSubmit={handleSubmit(this.clicked)}>
                     <div className={styles.row}>
                         <Field
@@ -161,10 +152,9 @@ class RegistrationForm extends React.Component {
     }
 }
 
-
 const mapStateToProps = (state) => {
     return {
-        auth: state.auth,
+        ...state.auth,                                                /*auth: state.auth,*/
         initialValues: {
             role: CONSTANTS.CUSTOMER
         }
@@ -177,7 +167,6 @@ const mapDispatchToProps = (dispatch) => (
         authClear: () => dispatch(clearAuth())
     }
 );
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
     form: 'login',
