@@ -1,12 +1,12 @@
 /*Подключаем и express и socketIo одновременно*/
 
-require('./server/dbMongo/mongoose');                                                 /*импортируем конфиги mongoose*/
+require('./dbMongo/mongoose');                                                 /*импортируем конфиги mongoose*/
 const http = require('http');                                                         /*подключаем модуль http, нодовский дефольный*/
 const express = require('express');
-const router = require('./server/router');
+const router = require('./router');
 const cors = require('cors');                                                         /*подключаем middleware для cors origin resorses*/
 const controller = require('./socketInit');
-const handlerError = require('./server/handlerError/handler');
+const handlerError = require('./handlerError/handler');
 
 
 const PORT = process.env.PORT || 9632;                                                /*пдключаем порт, если в переменном окружении не указан то берем 9632*/

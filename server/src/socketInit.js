@@ -1,8 +1,8 @@
 
 
 const socketio = require('socket.io');
-const ChatController = require('./server/controllers/sockets/ChatController');
-const NotificationController = require('./server/controllers/sockets/NotificationController');
+const ChatController = require('./controllers/sockets/ChatController');
+const NotificationController = require('./controllers/sockets/NotificationController');
 
     /*!!!!! плохое решение так использовать переменные*/
 let notificationController;

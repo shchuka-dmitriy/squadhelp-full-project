@@ -1,6 +1,6 @@
 /*Абстрактный клас для последующего его наследования в контроллерах для socket*/
 
-const CONSTANTS = require('../../../constants');
+const CONSTANTS = require('../../constants');
 
 class WebSocket{
   connect (namespace, io) {

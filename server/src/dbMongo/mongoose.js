@@ -1,6 +1,6 @@
 /*--Это установка и настройка конфигурации mongoose--*/
 
-const mongoose = require('mongoose');                                               /*устанавливаем mongoose*/
+const mongoose = require('server/src/dbMongo/mongoose');                                               /*устанавливаем mongoose*/
 const path = require('path');
 const env = process.env.NODE_ENV || 'development';                                      /*определяется какой режим в зависимости от переменной окружения NODE_ENV. По дефолту development*/
 const configPath = path.join(__dirname, '..',                                           /*определяем где находится файл конфигурации*/
